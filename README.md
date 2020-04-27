@@ -7,4 +7,4 @@
 Parent POM file for all Hygieia Projects from versions 4.x and above.
 <ul>
 <li>Spring Version - 5.2.5.RELEASE
-<li>Spring Boot - 
+<li>Spring Boot - 2.2.5.RELEASE
