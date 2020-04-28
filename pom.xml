@@ -4,7 +4,7 @@
     <packaging>pom</packaging>
     <groupId>com.capitalone.dashboard</groupId>
     <artifactId>hygieia-pom</artifactId>
-    <version>4.0.0</version>
+    <version>4.0.1</version>
     <description>Parent POM for all Hygieia apis and Microservices</description>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/Hygieia/hygieia-pom</url>
