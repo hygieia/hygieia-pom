@@ -7,12 +7,12 @@
     <version>4.0.0</version>
     <description>Parent POM for all Hygieia apis and Microservices</description>
     <name>${project.groupId}:${project.artifactId}</name>
+    <url>https://github.com/Hygieia/hygieia-pom</url>
 
-    <parent>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-parent</artifactId>
-      <version>2.2.5.RELEASE</version>
-    </parent>
+    <organization>
+      <name>Hygieia</name>
+      <url>https://www.github.com/Hygieia</url>
+    </organization>
 
     <licenses>
         <license>
@@ -20,6 +20,12 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+    <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+  </parent>
 
     <properties>
         <repository.name>hygieia-pom</repository.name>
@@ -64,22 +70,7 @@
         <spotbugs.plugin.version>3.1.11</spotbugs.plugin.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>1.10.19</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-  <developers>
+    <developers>
     <developer>
       <name>Tapabrata Topo Pal</name>
       <email>tapabrata.pal@capitalone.com</email>
@@ -94,14 +85,14 @@
     </developer>
   </developers>
 
-  <scm>
+    <scm>
     <connection>scm:git:https://github.com/Hygieia/${repository.name}.git</connection>
     <developerConnection>scm:git:https://github.com/Hygieia/${repository.name}.git
     </developerConnection>
     <url>https://github.com/Hygieia/${repository.name}</url>
   </scm>
 
-  <distributionManagement>
+    <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -112,7 +103,22 @@
     </repository>
   </distributionManagement>
 
-  <build>
+    <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.10.19</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+    <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -340,7 +346,7 @@
     </testResources>
   </build>
 
-  <reporting>
+    <reporting>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -508,7 +514,7 @@
     </plugins>
   </reporting>
 
-  <profiles>
+    <profiles>
     <profile>
       <!--
         Generate release notes in top-level directory from src/changes/changes.xml
