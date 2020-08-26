@@ -4,7 +4,7 @@
     <packaging>pom</packaging>
     <groupId>com.capitalone.dashboard</groupId>
     <artifactId>hygieia-pom</artifactId>
-    <version>4.0.1</version>
+    <version>4.0.2</version>
     <description>Parent POM for all Hygieia apis and Microservices</description>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/Hygieia/hygieia-pom</url>
@@ -38,7 +38,6 @@
         <commons.collection.version>4.2</commons.collection.version>
         <spring.data.version>2.1.4.RELEASE</spring.data.version>
         <guava.version>28.2-jre</guava.version>
-        <hamcrest.version>1.3</hamcrest.version>
         <querydsl.version>4.2.1</querydsl.version>
         <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
         <pmd.version>3.6</pmd.version>
@@ -46,8 +45,8 @@
         <jacoco.maven.plugin.version>0.8.5</jacoco.maven.plugin.version>
         <jacoco.coverage.percentage.minimum>0.200</jacoco.coverage.percentage.minimum>
         <jacoco.classes.missed.minimum>300</jacoco.classes.missed.minimum>
-        <java.compilation.source>1.8</java.compilation.source>
-        <java.compilation.target>1.8</java.compilation.target>
+        <java.compilation.source>11</java.compilation.source>
+        <java.compilation.target>11</java.compilation.target>
         <junit.version>4.12</junit.version>
         <joda-time.version>2.7</joda-time.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -150,24 +149,24 @@
           <target>${java.compilation.target}</target>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.github.siom79.japicmp</groupId>
-        <artifactId>japicmp-maven-plugin</artifactId>
-        <version>0.13.1</version>
-        <configuration>
-          <parameter>
-            <!-- see documentation -->
-          </parameter>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>verify</phase>
-            <goals>
-              <goal>cmp</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.github.siom79.japicmp</groupId>-->
+<!--        <artifactId>japicmp-maven-plugin</artifactId>-->
+<!--        <version>0.13.1</version>-->
+<!--        <configuration>-->
+<!--          <parameter>-->
+<!--            &lt;!&ndash; see documentation &ndash;&gt;-->
+<!--          </parameter>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <phase>verify</phase>-->
+<!--            <goals>-->
+<!--              <goal>cmp</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -387,11 +386,11 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <plugin>
-        <groupId>com.github.siom79.japicmp</groupId>
-        <artifactId>japicmp-maven-plugin</artifactId>
-        <version>0.13.1</version>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.github.siom79.japicmp</groupId>-->
+<!--        <artifactId>japicmp-maven-plugin</artifactId>-->
+<!--        <version>0.13.1</version>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
@@ -634,8 +633,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.5.1</version>
             <configuration>
-              <source>1.8</source>
-              <target>1.8</target>
+              <source>11</source>
+              <target>11</target>
             </configuration>
           </plugin>
           <plugin>
